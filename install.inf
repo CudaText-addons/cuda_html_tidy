@@ -3,6 +3,7 @@ title=HTML Tidy
 desc=Validates HTML documents using Tidy tool
 type=cudatext-plugin
 subdir=cuda_html_tidy
+api=1.0.252
 
 [item1]
 section=commands

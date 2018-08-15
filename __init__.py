@@ -16,20 +16,19 @@ dir_temp = tempfile.gettempdir()
 
 
 def do_log_clear():
-    app_log(LOG_SET_PANEL, LOG_PANEL_VALIDATE)
-    app_log(LOG_CLEAR, '')
+    app_log(LOG_CLEAR, '', panel=LOG_PANEL_VALIDATE)
 
 def do_log(fn_ed, fn_err):
-    app_log(LOG_SET_REGEX, r'line (\d+) column (\d+) .+')
-    app_log(LOG_SET_LINE_ID, '1')
-    app_log(LOG_SET_COL_ID, '2')
-    app_log(LOG_SET_NAME_ID, '0')
-    app_log(LOG_SET_FILENAME, fn_ed)
+    app_log(LOG_SET_REGEX, r'line (\d+) column (\d+) .+', panel=LOG_PANEL_VALIDATE)
+    app_log(LOG_SET_LINE_ID, '1', panel=LOG_PANEL_VALIDATE)
+    app_log(LOG_SET_COL_ID, '2', panel=LOG_PANEL_VALIDATE)
+    app_log(LOG_SET_NAME_ID, '0', panel=LOG_PANEL_VALIDATE)
+    app_log(LOG_SET_FILENAME, fn_ed, panel=LOG_PANEL_VALIDATE)
     
     text = open(fn_err).read().splitlines()
     if not text: return
     for s in text:
-        app_log(LOG_ADD, s)
+        app_log(LOG_ADD, s, panel=LOG_PANEL_VALIDATE)
         
     ed.focus()    
     ed.cmd(cudatext_cmd.cmd_ShowPanelValidate)

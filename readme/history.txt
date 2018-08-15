@@ -1,7 +1,8 @@
 
 2018.08.15
-+ Tidy (Win32 .exe) updated to version 5.6.0
++ Tidy Windows binary updated to v5.6.0
 + readme converted to txt format
+- avoid deprecated API
 
 2015.10
 initial
