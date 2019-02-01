@@ -1,5 +1,6 @@
 
 2019.02.01
++ command "Browse configs" works on Win/Linux/Mac
 - avoid deprecated API
 
 2018.08.15

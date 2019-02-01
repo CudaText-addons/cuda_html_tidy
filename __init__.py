@@ -1,4 +1,6 @@
 import os
+import platform
+import subprocess
 import webbrowser
 import cudatext_cmd
 import tempfile
@@ -14,7 +16,15 @@ config_dir = os.path.join(os.path.dirname(__file__), 'configs')
 help_url = 'http://www.htacg.org/tidy-html5/'
 dir_temp = tempfile.gettempdir()
 
+def open_file(path):
 
+    if platform.system() == "Windows":
+        os.startfile(path)
+    elif platform.system() == "Darwin":
+        subprocess.Popen(["open", path])
+    else:
+        subprocess.Popen(["xdg-open", path])
+        
 def do_log_clear():
 
     app_log(LOG_CLEAR, '', panel=LOG_PANEL_VALIDATE)
@@ -116,10 +126,7 @@ class Command:
 
     def configs(self):
 
-        if os.name=='nt':
-            do_run_normal(['Explorer.exe', config_dir])
-        else:
-            msg_box('Command is for Windows only', MB_OK)
+        open_file(config_dir)
 
     def web(self):
 
