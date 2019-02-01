@@ -1,4 +1,7 @@
 
+2019.02.01
+- avoid deprecated API
+
 2018.08.15
 + Tidy Windows binary updated to v5.6.0
 + readme converted to txt format

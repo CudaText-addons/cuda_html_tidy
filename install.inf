@@ -7,17 +7,20 @@ api=1.0.252
 
 [item1]
 section=commands
-caption=HTML Tidy\Menu
+caption=HTML Tidy\Menu...
 method=menu
+
 [item2]
 section=commands
 caption=HTML Tidy\Validate document
 method=validate
+
 [item3]
 section=commands
 caption=HTML Tidy\Browse configs
 method=configs
+
 [item4]
 section=commands
-caption=HTML Tidy\Web site
+caption=HTML Tidy\Visit web site
 method=web
