@@ -13,5 +13,5 @@ Help links:
 - http://tidy.sourceforge.net/docs/quickref.html - HTML4 Tidy help
 - http://w3c.github.io/tidy-html5/ - HTML5 Tidy help
 
-Author: Alexey (CudaText)
+Author: Alexey Torgashin (CudaText)
 License: MIT
