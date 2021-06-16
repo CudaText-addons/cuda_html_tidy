@@ -53,7 +53,7 @@ def do_menu():
     l = sorted(l)
     l_full = [os.path.join(config_dir, s) for s in l]
     l_nice = [s[:s.find('.')] for s in l]
-    n = dlg_menu(MENU_LIST, '\n'.join(l_nice))
+    n = dlg_menu(DMENU_LIST, l_nice, caption='Tidy configs')
     if n is None: return
     return l_full[n]
 
